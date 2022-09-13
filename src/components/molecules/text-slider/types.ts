@@ -1,4 +1,4 @@
 export enum SliderArrowDirection {
-  PREVIOUS = "PREVIOUS",
-  NEXT = "NEXT",
+    PREVIOUS = "PREVIOUS",
+    NEXT = "NEXT"
 }

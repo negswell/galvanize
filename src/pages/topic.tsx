@@ -4,17 +4,17 @@ import { usePhotosByTopic } from "hooks";
 import { useParams } from "react-router-dom";
 
 export const Topic = () => {
-  const { slug } = useParams();
-  const query = usePhotosByTopic({
-    per_page: 9,
-    slug,
-  });
+    const { slug } = useParams();
+    const query = usePhotosByTopic({
+        per_page: 9,
+        slug
+    });
 
-  return (
-    <div className="mt-10 px-10 ">
-      <ErrorBoundary>
-        <PhotoGrid query={query} />
-      </ErrorBoundary>
-    </div>
-  );
+    return (
+        <div className="mt-10 px-10 ">
+            <ErrorBoundary>
+                <PhotoGrid query={query} />
+            </ErrorBoundary>
+        </div>
+    );
 };
