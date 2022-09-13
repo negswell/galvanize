@@ -1,6 +1,8 @@
 # galvanize
 A place to find and download your favorite photos.
 
+Check it out live [here](https://galvanize.vercel.app/)
+
 To run the dev server :
 `npm run dev`
 
