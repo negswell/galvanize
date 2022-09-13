@@ -5,117 +5,89 @@
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Galvanize</title>
+        <style>
+            .container {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            #svg-spinner {
+                height: 100px;
+                width: 100px;
+                -webkit-transition-property: -webkit-transform;
+                -webkit-transition-duration: 1.2s;
+                transition-duration: 1.2s;
+                -webkit-animation-name: rotate;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-timing-function: linear;
+
+                -moz-transition-property: -moz-transform;
+                -moz-animation-name: rotate;
+                -moz-animation-duration: 1.2s;
+                -moz-animation-iteration-count: infinite;
+                -moz-animation-timing-function: linear;
+
+                transition-property: transform;
+                animation-name: rotate;
+
+                animation-duration: 1.2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+
+            @-webkit-keyframes rotate {
+                from {
+                    -webkit-transform: rotate(0deg);
+                }
+                to {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+
+            @-moz-keyframes rotate {
+                from {
+                    -moz-transform: rotate(0deg);
+                }
+                to {
+                    -moz-transform: rotate(360deg);
+                }
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
     </head>
     <body>
         <div id="root">
-            <div
-                class="flex items-center justify-center"
-                style="width: 100vw; height: 100vh"
-            >
-                <div style="width: 100px; height: 100px">
+            <div class="container">
+                <div>
                     <svg
-                        version="1.1"
-                        id="L1"
+                        id="svg-spinner"
                         xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        x="0px"
-                        y="0px"
-                        viewBox="0 0 100 100"
-                        enable-background="new 0 0 100 100"
-                        xml:space="preserve"
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
                     >
-                        <circle
-                            fill="none"
-                            stroke="#000000"
-                            stroke-width="6"
-                            stroke-miterlimit="15"
-                            stroke-dasharray="14.2472,14.2472"
-                            cx="50"
-                            cy="50"
-                            r="47"
-                        >
-                            <animateTransform
-                                attributeName="transform"
-                                attributeType="XML"
-                                type="rotate"
-                                dur="5s"
-                                from="0 50 50"
-                                to="360 50 50"
-                                repeatCount="indefinite"
-                            />
-                        </circle>
-                        <circle
-                            fill="none"
-                            stroke="#000000"
-                            stroke-width="1"
-                            stroke-miterlimit="10"
-                            stroke-dasharray="10,10"
-                            cx="50"
-                            cy="50"
-                            r="39"
-                        >
-                            <animateTransform
-                                attributeName="transform"
-                                attributeType="XML"
-                                type="rotate"
-                                dur="5s"
-                                from="0 50 50"
-                                to="-360 50 50"
-                                repeatCount="indefinite"
-                            />
-                        </circle>
-                        <g fill="#000000">
-                            <rect x="30" y="35" width="5" height="30">
-                                <animateTransform
-                                    attributeName="transform"
-                                    dur="1s"
-                                    type="translate"
-                                    values="0 5 ; 0 -5; 0 5"
-                                    repeatCount="indefinite"
-                                    begin="0.1"
-                                />
-                            </rect>
-                            <rect x="40" y="35" width="5" height="30">
-                                <animateTransform
-                                    attributeName="transform"
-                                    dur="1s"
-                                    type="translate"
-                                    values="0 5 ; 0 -5; 0 5"
-                                    repeatCount="indefinite"
-                                    begin="0.2"
-                                />
-                            </rect>
-                            <rect x="50" y="35" width="5" height="30">
-                                <animateTransform
-                                    attributeName="transform"
-                                    dur="1s"
-                                    type="translate"
-                                    values="0 5 ; 0 -5; 0 5"
-                                    repeatCount="indefinite"
-                                    begin="0.3"
-                                />
-                            </rect>
-                            <rect x="60" y="35" width="5" height="30">
-                                <animateTransform
-                                    attributeName="transform"
-                                    dur="1s"
-                                    type="translate"
-                                    values="0 5 ; 0 -5; 0 5"
-                                    repeatCount="indefinite"
-                                    begin="0.4"
-                                />
-                            </rect>
-                            <rect x="70" y="35" width="5" height="30">
-                                <animateTransform
-                                    attributeName="transform"
-                                    dur="1s"
-                                    type="translate"
-                                    values="0 5 ; 0 -5; 0 5"
-                                    repeatCount="indefinite"
-                                    begin="0.5"
-                                />
-                            </rect>
-                        </g>
+                        <circle cx="24" cy="4" r="4" fill="#000" />
+                        <circle cx="12.19" cy="7.86" r="3.7" fill="#000" />
+                        <circle cx="5.02" cy="17.68" r="3.4" fill="#000" />
+                        <circle cx="5.02" cy="30.32" r="3.1" fill="#000" />
+                        <circle cx="12.19" cy="40.14" r="2.8" fill="#000" />
+                        <circle cx="24" cy="44" r="2.5" fill="#000" />
+                        <circle cx="35.81" cy="40.14" r="2.2" fill="#000" />
+                        <circle cx="42.98" cy="30.32" r="1.9" fill="#000" />
+                        <circle cx="42.98" cy="17.68" r="1.6" fill="#000" />
+                        <circle cx="35.81" cy="7.86" r="1.3" fill="#000" />
                     </svg>
                 </div>
             </div>

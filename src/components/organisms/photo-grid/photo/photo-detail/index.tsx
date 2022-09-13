@@ -40,7 +40,12 @@ export const PhotoDetail: FC<PhotoDetailProps> = ({ photo, onClose }) => {
                             <span>{photo.user.name}</span>
                         </div>
                         <div className="flex gap-7">
-                            <button className="flex items-center gap-1 p-2 rounded-md border text-gray-500 hover:border-black hover:text-black transition-colors ease-in">
+                            <button
+                                className="flex items-center gap-1 p-2 rounded-md border text-gray-500 hover:border-black hover:text-black transition-colors ease-in"
+                                onClick={() =>
+                                    downloadImage(photo["urls"]["full"])
+                                }
+                            >
                                 {isLoading ? (
                                     <Spinner />
                                 ) : (
@@ -48,11 +53,7 @@ export const PhotoDetail: FC<PhotoDetailProps> = ({ photo, onClose }) => {
                                         {data.downloads}
                                     </span>
                                 )}
-                                <DownloadIcon
-                                    onClick={() =>
-                                        downloadImage(photo["urls"]["full"])
-                                    }
-                                />
+                                <DownloadIcon />
                             </button>
                             <button className="flex items-center gap-1 p-2 rounded-md border text-gray-500 hover:border-black hover:text-black transition-colors ease-in">
                                 <span className="text-md">{photo.likes}</span>
